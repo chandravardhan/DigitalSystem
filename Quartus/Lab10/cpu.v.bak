@@ -1,0 +1,82 @@
+module cpu (clk, nRESET);
+input clk;
+input nRESET;
+reg [15:0] pc;
+reg [ 3:0] NZCV;
+wire [15:0] instr;
+wire unary;
+wire sgned;
+wire imode;
+wire [3:0] aluop;
+wire setcc;
+wire [2:0] rD, rA, rB;
+wire [3:0] imm;
+wire wben;
+wire [15:0] valA, valB, svalA, svalB, valE;
+wire [ 3:0] cc;
+
+/* PC register */ 
+always @(posedge clk or negedge nRESET) 
+	if (!nRESET) pc <= 16’b0;
+	else pc <= pc+2;
+	
+/* instruction memory */ 
+memory imem (clk, `READ, pc, instr);
+/* instruction decoder */ 
+decoder idec (instr, unary, sgned, imode, aluop, setcc, rD, rA, rB, imm, wben);
+/* register file */ 
+reg_file ireg_file (clk, nRESET, wben, rD, valE, rA, rB, valA, valB);
+
+/* ALU */ 
+assign svalA = unary ? 16’b0 : valA;
+assign svalB = imode ? sgned ? {{12{imm[3]}}, imm}/*sign ext*/ : {12’b0, imm}/*zero ext*/ : valB;
+alu ialu (svalA, svalB, aluop, cc, valE);
+
+/* condition code register */ always @(posedge clk or negedge nRESET) if (nRESET) NZCV <= 4’b0;
+else if(setcc) NZCV <= cc;
+
+endmodule
+
+module decoder (instr, unary, imode, aluop, setcc, rD, rA, rB, imm, wben);
+input [15:0] instr;
+output unary;
+output sgned;
+output imode;
+output [2:0] aluop; // ADD,SUB,SHL,SHR,AND,OR,NOT (3 bits for 7 ops) output setcc;
+output [2:0] rD;
+output [2:0] rA;
+output [2:0] rB;
+output [3:0] imm;
+output wben;
+reg unary, sgned, imode, … ;
+wire [4:0] opcode;
+assign opcode = instr[4:0];
+always @(instr) case (opcode) `ADD: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {1’b0,1’b1,1’b0,`ADD,instr[5],instr[8:6],instr[11:9],instr[14:12],4’bx,1’b1};
+`ADDI: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {1’b0,1’b1,1’b1,`ADD,instr[5],instr[8:6],instr[11:9],3’bx,instr[15:12],1’b1};
+`SUB: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {1’b0,1’b1,1’b0,`SUB,instr[5],instr[8:6],instr[11:9],instr[14:12],4’bx,1’b1};
+`SUBI: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {1’b0,1’b1,1’b1,`SUB,instr[5],instr[8:6],instr11:9],3’bx,instr[15:12],1’b1};
+`MOV: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {1’b1,1’b1,1’b0,`ADD,1’b0,instr[8:6],3’bx,instr[14:12],4’bx,1’b1};
+`MOVI: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {1’b1,1’b1,1’b1,`ADD,1’b0,instr[8:6],3’bx,3’bx,instr[15:12],1’b1};
+`SHL: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {…};
+`SHLI: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {…};
+`SHR: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {…};
+`SHRI: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {…};
+`AND: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {…};
+`ANDI: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {…};
+`OR: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {…};
+`ORI: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {…};
+`NOT: {unary,sgned,imode,aluop,setcc,rD,rA,rB,imm,wben} = {…};
+endcase
+endmodule
+
+/* simulation model; not for synthesis */ 
+module memory (clk, op, addr, data);
+input clk;
+input op; // READ or WRITE input [15:0] addr;
+output [15:0] data;
+/* array in Verilog; simulation only */ reg [7:0] mem [0:65535]; // 65536 entries of 8-bit entry
+/* Read */ assign data = {mem[addr+1], mem[addr]}; // 16-bit little endian
+/* Write */ always @(posedge clk) if (op == `WRITE) {mem[addr+1], mem[addr]} <= data;
+endmodule
+
+

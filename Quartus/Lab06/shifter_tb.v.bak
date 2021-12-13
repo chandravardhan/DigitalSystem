@@ -1,0 +1,33 @@
+module shifter_tb;
+
+reg [3:0] shift;
+reg lr;
+reg [15:0] in;
+reg [15:0] out;
+
+integer i,ans;
+parameter iter = 1000;
+
+
+initial begin
+
+for(i = 0;i < iter; i = i + 1) begin
+	
+	in = $random;
+	lr = $random;
+	shift = $random;
+	
+	if(lr == 0) ans = in >> shift;
+	else ans = in << shift;
+	
+	if(out != ans) begin
+		if(lr == 0) $display("%d >> %d = %d, but %d\n", in, shift, ans, out);						
+		else $display("%d << %d = %d, but %d\n", in, shift, ans, out);		
+	end
+	#10;
+	
+end
+
+end
+
+endmodule

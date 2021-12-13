@@ -1,0 +1,22 @@
+module FSM_tb;
+
+reg CLK,nRESET, in, out;
+
+always
+	#2.5 CLK = ~CLK;
+
+mealy imealy(.nRESET(nRESET), .CLK(CLK), .in(in), .out(out));
+
+initial begin
+
+$dumpvars;
+CLK=1'b0;
+nRESET = 1'b1;
+
+#5 nRESET = 1'b0;
+#5 nRESET = 1'b1;
+#50000
+$finish;
+
+end
+endmodule

@@ -1,0 +1,22 @@
+module kogge_stone_tb;
+
+reg [15:0] x,y,sum;
+reg cout,cin;
+
+parameter iter = 1000;
+integer i;
+
+kogge_stone i_kogge_stone(x,y,cin,cout,sum);
+
+initial begin
+
+for(i = 0; i < iter; i++) begin
+	x = $random;
+	y = $random;
+	cin = $random;
+	#10;
+end
+
+
+
+end

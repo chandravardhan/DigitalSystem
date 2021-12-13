@@ -1,0 +1,16 @@
+module RCA4bit_tb;
+	reg [3:0] x,y;
+	reg cin;
+	
+	reg [3:0] s;
+	reg cout;
+	
+	integer i;
+	parameter iter = 5000;
+	
+	RCA4bit RCA4bit_i0(.x(), .y(y), .cin(cin), .cout(cout), .s(s));
+	
+	initial begin
+	
+	end
+endmodule

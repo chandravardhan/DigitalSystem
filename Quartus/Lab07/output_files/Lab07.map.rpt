@@ -1,0 +1,708 @@
+Analysis & Synthesis report for Lab07
+Thu Nov 26 12:43:33 2020
+Quartus II 64-Bit Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Analysis & Synthesis Summary
+  3. Analysis & Synthesis Settings
+  4. Parallel Compilation
+  5. Analysis & Synthesis Source Files Read
+  6. Analysis & Synthesis Resource Usage Summary
+  7. Analysis & Synthesis Resource Utilization by Entity
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "Kogge32b:ksa32|black_cell:level_15E"
+ 11. Port Connectivity Checks: "Kogge32b:ksa32|black_cell:level_7D"
+ 12. Port Connectivity Checks: "Kogge32b:ksa32|black_cell:level_3C"
+ 13. Port Connectivity Checks: "Kogge32b:ksa32|black_cell:level_1B"
+ 14. Port Connectivity Checks: "Kogge32b:ksa32|black_cell:level_0A"
+ 15. Port Connectivity Checks: "Kogge32b:ksa32"
+ 16. Port Connectivity Checks: "CSA_HA:CSAHA"
+ 17. Port Connectivity Checks: "CSA:CSA5"
+ 18. Port Connectivity Checks: "CSA:CSA4"
+ 19. Port Connectivity Checks: "CSA:CSA3"
+ 20. Port Connectivity Checks: "CSA:CSA2"
+ 21. Port Connectivity Checks: "CSA:CSA1"
+ 22. Port Connectivity Checks: "CSA:CSA0"
+ 23. Port Connectivity Checks: "BOOTH:booth8"
+ 24. Port Connectivity Checks: "BOOTH:booth0"
+ 25. Elapsed Time Per Partition
+ 26. Analysis & Synthesis Messages
+ 27. Analysis & Synthesis Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++---------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                    ;
++------------------------------------+--------------------------------------------+
+; Analysis & Synthesis Status        ; Successful - Thu Nov 26 12:43:33 2020      ;
+; Quartus II 64-Bit Version          ; 13.1.0 Build 162 10/23/2013 SJ Web Edition ;
+; Revision Name                      ; Lab07                                      ;
+; Top-level Entity Name              ; MUL16x16                                   ;
+; Family                             ; Cyclone IV GX                              ;
+; Total logic elements               ; 665                                        ;
+;     Total combinational functions  ; 665                                        ;
+;     Dedicated logic registers      ; 0                                          ;
+; Total registers                    ; 0                                          ;
+; Total pins                         ; 64                                         ;
+; Total virtual pins                 ; 0                                          ;
+; Total memory bits                  ; 0                                          ;
+; Embedded Multiplier 9-bit elements ; 0                                          ;
+; Total GXB Receiver Channel PCS     ; 0                                          ;
+; Total GXB Receiver Channel PMA     ; 0                                          ;
+; Total GXB Transmitter Channel PCS  ; 0                                          ;
+; Total GXB Transmitter Channel PMA  ; 0                                          ;
+; Total PLLs                         ; 0                                          ;
++------------------------------------+--------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                        ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                     ; Setting            ; Default Value      ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+; Top-level entity name                                                      ; MUL16x16           ; Lab07              ;
+; Family name                                                                ; Cyclone IV GX      ; Cyclone IV GX      ;
+; Use smart compilation                                                      ; Off                ; Off                ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
+; Enable compact report table                                                ; Off                ; Off                ;
+; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
+; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
+; Preserve fewer node names                                                  ; On                 ; On                 ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                ;
+; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                   ; Auto               ; Auto               ;
+; Safe State Machine                                                         ; Off                ; Off                ;
+; Extract Verilog State Machines                                             ; On                 ; On                 ;
+; Extract VHDL State Machines                                                ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
+; Parallel Synthesis                                                         ; On                 ; On                 ;
+; DSP Block Balancing                                                        ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                         ; On                 ; On                 ;
+; Power-Up Don't Care                                                        ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
+; Remove Duplicate Registers                                                 ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
+; Optimization Technique                                                     ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                         ; 70                 ; 70                 ;
+; Auto Carry Chains                                                          ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
+; Auto ROM Replacement                                                       ; On                 ; On                 ;
+; Auto RAM Replacement                                                       ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
+; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
+; Strict RAM Replacement                                                     ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
+; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                      ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
+; Report Parameter Settings                                                  ; On                 ; On                 ;
+; Report Source Assignments                                                  ; On                 ; On                 ;
+; Report Connectivity Checks                                                 ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
+; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
+; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation ;
+; HDL message level                                                          ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
+; Clock MUX Protection                                                       ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
+; Block Design Naming                                                        ; Auto               ; Auto               ;
+; SDC constraint protection                                                  ; Off                ; Off                ;
+; Synthesis Effort                                                           ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
+; Synthesis Seed                                                             ; 1                  ; 1                  ;
++----------------------------------------------------------------------------+--------------------+--------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                           ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                             ; Library ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+; MUL16x16.v                       ; yes             ; User Verilog HDL File  ; D:/Project/2020-2/DigitalSystem/Quartus/Lab07/MUL16x16.v ;         ;
+; Kogge32b.v                       ; yes             ; User Verilog HDL File  ; D:/Project/2020-2/DigitalSystem/Quartus/Lab07/Kogge32b.v ;         ;
++----------------------------------+-----------------+------------------------+----------------------------------------------------------+---------+
+
+
++---------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary ;
++--------------------------+------------------+
+; Resource                 ; Usage            ;
++--------------------------+------------------+
+; I/O pins                 ; 64               ;
+; DSP block 9-bit elements ; 0                ;
+; Maximum fan-out node     ; y[7]~input       ;
+; Maximum fan-out          ; 56               ;
+; Total fan-out            ; 2555             ;
+; Average fan-out          ; 3.22             ;
++--------------------------+------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                 ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------+--------------+
+; Compilation Hierarchy Node   ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Library Name ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------+--------------+
+; |MUL16x16                    ; 665 (0)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 64   ; 0            ; |MUL16x16                                     ; work         ;
+;    |CSA:CSA0|                ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0                            ; work         ;
+;       |FA:fadd0|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd0                   ; work         ;
+;       |FA:fadd10|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd10                  ; work         ;
+;       |FA:fadd11|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd11                  ; work         ;
+;       |FA:fadd12|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd12                  ; work         ;
+;       |FA:fadd13|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd13                  ; work         ;
+;       |FA:fadd14|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd14                  ; work         ;
+;       |FA:fadd15|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd15                  ; work         ;
+;       |FA:fadd16|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd16                  ; work         ;
+;       |FA:fadd17|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd17                  ; work         ;
+;       |FA:fadd1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd1                   ; work         ;
+;       |FA:fadd2|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd2                   ; work         ;
+;       |FA:fadd3|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd3                   ; work         ;
+;       |FA:fadd4|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd4                   ; work         ;
+;       |FA:fadd5|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd5                   ; work         ;
+;       |FA:fadd6|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd6                   ; work         ;
+;       |FA:fadd7|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd7                   ; work         ;
+;       |FA:fadd8|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd8                   ; work         ;
+;       |FA:fadd9|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA0|FA:fadd9                   ; work         ;
+;    |CSA:CSA1|                ; 35 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1                            ; work         ;
+;       |FA:fadd0|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd0                   ; work         ;
+;       |FA:fadd10|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd10                  ; work         ;
+;       |FA:fadd11|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd11                  ; work         ;
+;       |FA:fadd12|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd12                  ; work         ;
+;       |FA:fadd13|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd13                  ; work         ;
+;       |FA:fadd14|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd14                  ; work         ;
+;       |FA:fadd15|            ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd15                  ; work         ;
+;       |FA:fadd16|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd16                  ; work         ;
+;       |FA:fadd1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd1                   ; work         ;
+;       |FA:fadd2|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd2                   ; work         ;
+;       |FA:fadd3|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd3                   ; work         ;
+;       |FA:fadd4|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd4                   ; work         ;
+;       |FA:fadd5|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd5                   ; work         ;
+;       |FA:fadd6|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd6                   ; work         ;
+;       |FA:fadd7|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd7                   ; work         ;
+;       |FA:fadd8|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd8                   ; work         ;
+;       |FA:fadd9|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA1|FA:fadd9                   ; work         ;
+;    |CSA:CSA2|                ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2                            ; work         ;
+;       |FA:fadd0|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd0                   ; work         ;
+;       |FA:fadd10|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd10                  ; work         ;
+;       |FA:fadd11|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd11                  ; work         ;
+;       |FA:fadd12|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd12                  ; work         ;
+;       |FA:fadd13|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd13                  ; work         ;
+;       |FA:fadd14|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd14                  ; work         ;
+;       |FA:fadd15|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd15                  ; work         ;
+;       |FA:fadd16|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd16                  ; work         ;
+;       |FA:fadd1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd1                   ; work         ;
+;       |FA:fadd2|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd2                   ; work         ;
+;       |FA:fadd3|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd3                   ; work         ;
+;       |FA:fadd4|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd4                   ; work         ;
+;       |FA:fadd5|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd5                   ; work         ;
+;       |FA:fadd6|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd6                   ; work         ;
+;       |FA:fadd7|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd7                   ; work         ;
+;       |FA:fadd8|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd8                   ; work         ;
+;       |FA:fadd9|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA2|FA:fadd9                   ; work         ;
+;    |CSA:CSA3|                ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3                            ; work         ;
+;       |FA:fadd0|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd0                   ; work         ;
+;       |FA:fadd10|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd10                  ; work         ;
+;       |FA:fadd11|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd11                  ; work         ;
+;       |FA:fadd12|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd12                  ; work         ;
+;       |FA:fadd13|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd13                  ; work         ;
+;       |FA:fadd14|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd14                  ; work         ;
+;       |FA:fadd15|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd15                  ; work         ;
+;       |FA:fadd16|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd16                  ; work         ;
+;       |FA:fadd1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd1                   ; work         ;
+;       |FA:fadd2|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd2                   ; work         ;
+;       |FA:fadd3|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd3                   ; work         ;
+;       |FA:fadd4|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd4                   ; work         ;
+;       |FA:fadd5|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd5                   ; work         ;
+;       |FA:fadd6|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd6                   ; work         ;
+;       |FA:fadd7|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd7                   ; work         ;
+;       |FA:fadd8|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd8                   ; work         ;
+;       |FA:fadd9|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA3|FA:fadd9                   ; work         ;
+;    |CSA:CSA4|                ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4                            ; work         ;
+;       |FA:fadd0|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd0                   ; work         ;
+;       |FA:fadd10|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd10                  ; work         ;
+;       |FA:fadd11|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd11                  ; work         ;
+;       |FA:fadd12|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd12                  ; work         ;
+;       |FA:fadd13|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd13                  ; work         ;
+;       |FA:fadd14|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd14                  ; work         ;
+;       |FA:fadd15|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd15                  ; work         ;
+;       |FA:fadd16|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd16                  ; work         ;
+;       |FA:fadd1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd1                   ; work         ;
+;       |FA:fadd2|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd2                   ; work         ;
+;       |FA:fadd3|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd3                   ; work         ;
+;       |FA:fadd4|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd4                   ; work         ;
+;       |FA:fadd5|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd5                   ; work         ;
+;       |FA:fadd6|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd6                   ; work         ;
+;       |FA:fadd7|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd7                   ; work         ;
+;       |FA:fadd8|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd8                   ; work         ;
+;       |FA:fadd9|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA4|FA:fadd9                   ; work         ;
+;    |CSA:CSA5|                ; 34 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5                            ; work         ;
+;       |FA:fadd0|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd0                   ; work         ;
+;       |FA:fadd10|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd10                  ; work         ;
+;       |FA:fadd11|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd11                  ; work         ;
+;       |FA:fadd12|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd12                  ; work         ;
+;       |FA:fadd13|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd13                  ; work         ;
+;       |FA:fadd14|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd14                  ; work         ;
+;       |FA:fadd15|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd15                  ; work         ;
+;       |FA:fadd16|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd16                  ; work         ;
+;       |FA:fadd1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd1                   ; work         ;
+;       |FA:fadd2|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd2                   ; work         ;
+;       |FA:fadd3|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd3                   ; work         ;
+;       |FA:fadd4|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd4                   ; work         ;
+;       |FA:fadd5|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd5                   ; work         ;
+;       |FA:fadd6|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd6                   ; work         ;
+;       |FA:fadd7|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd7                   ; work         ;
+;       |FA:fadd8|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd8                   ; work         ;
+;       |FA:fadd9|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA:CSA5|FA:fadd9                   ; work         ;
+;    |CSA_HA:CSAHA|            ; 30 (0)            ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA                        ; work         ;
+;       |HA:hadd0|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd0               ; work         ;
+;       |HA:hadd10|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd10              ; work         ;
+;       |HA:hadd11|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd11              ; work         ;
+;       |HA:hadd12|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd12              ; work         ;
+;       |HA:hadd13|            ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd13              ; work         ;
+;       |HA:hadd14|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd14              ; work         ;
+;       |HA:hadd15|            ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd15              ; work         ;
+;       |HA:hadd1|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd1               ; work         ;
+;       |HA:hadd2|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd2               ; work         ;
+;       |HA:hadd3|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd3               ; work         ;
+;       |HA:hadd4|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd4               ; work         ;
+;       |HA:hadd5|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd5               ; work         ;
+;       |HA:hadd6|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd6               ; work         ;
+;       |HA:hadd7|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd7               ; work         ;
+;       |HA:hadd8|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd8               ; work         ;
+;       |HA:hadd9|             ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|CSA_HA:CSAHA|HA:hadd9               ; work         ;
+;    |Kogge32b:ksa32|          ; 182 (36)          ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32                      ; work         ;
+;       |black_cell:level_10A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_10A ; work         ;
+;       |black_cell:level_10B| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_10B ; work         ;
+;       |black_cell:level_10D| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_10D ; work         ;
+;       |black_cell:level_11A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_11A ; work         ;
+;       |black_cell:level_11B| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_11B ; work         ;
+;       |black_cell:level_11D| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_11D ; work         ;
+;       |black_cell:level_12A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_12A ; work         ;
+;       |black_cell:level_12B| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_12B ; work         ;
+;       |black_cell:level_12C| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_12C ; work         ;
+;       |black_cell:level_12D| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_12D ; work         ;
+;       |black_cell:level_13A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_13A ; work         ;
+;       |black_cell:level_13B| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_13B ; work         ;
+;       |black_cell:level_13C| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_13C ; work         ;
+;       |black_cell:level_13D| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_13D ; work         ;
+;       |black_cell:level_14A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_14A ; work         ;
+;       |black_cell:level_14B| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_14B ; work         ;
+;       |black_cell:level_14D| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_14D ; work         ;
+;       |black_cell:level_15A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_15A ; work         ;
+;       |black_cell:level_15B| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_15B ; work         ;
+;       |black_cell:level_15C| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_15C ; work         ;
+;       |black_cell:level_15D| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_15D ; work         ;
+;       |black_cell:level_16A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_16A ; work         ;
+;       |black_cell:level_16B| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_16B ; work         ;
+;       |black_cell:level_16C| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_16C ; work         ;
+;       |black_cell:level_16E| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_16E ; work         ;
+;       |black_cell:level_17A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_17A ; work         ;
+;       |black_cell:level_17B| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_17B ; work         ;
+;       |black_cell:level_17C| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_17C ; work         ;
+;       |black_cell:level_18A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_18A ; work         ;
+;       |black_cell:level_18B| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_18B ; work         ;
+;       |black_cell:level_18C| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_18C ; work         ;
+;       |black_cell:level_18E| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_18E ; work         ;
+;       |black_cell:level_19A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_19A ; work         ;
+;       |black_cell:level_19B| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_19B ; work         ;
+;       |black_cell:level_19C| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_19C ; work         ;
+;       |black_cell:level_19E| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_19E ; work         ;
+;       |black_cell:level_1A|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_1A  ; work         ;
+;       |black_cell:level_20A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_20A ; work         ;
+;       |black_cell:level_20B| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_20B ; work         ;
+;       |black_cell:level_20C| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_20C ; work         ;
+;       |black_cell:level_21A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_21A ; work         ;
+;       |black_cell:level_21B| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_21B ; work         ;
+;       |black_cell:level_21C| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_21C ; work         ;
+;       |black_cell:level_21E| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_21E ; work         ;
+;       |black_cell:level_22A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_22A ; work         ;
+;       |black_cell:level_22B| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_22B ; work         ;
+;       |black_cell:level_22E| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_22E ; work         ;
+;       |black_cell:level_23A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_23A ; work         ;
+;       |black_cell:level_23B| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_23B ; work         ;
+;       |black_cell:level_23C| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_23C ; work         ;
+;       |black_cell:level_24A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_24A ; work         ;
+;       |black_cell:level_24E| ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_24E ; work         ;
+;       |black_cell:level_25A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_25A ; work         ;
+;       |black_cell:level_25E| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_25E ; work         ;
+;       |black_cell:level_26A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_26A ; work         ;
+;       |black_cell:level_26E| ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_26E ; work         ;
+;       |black_cell:level_27A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_27A ; work         ;
+;       |black_cell:level_27E| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_27E ; work         ;
+;       |black_cell:level_28A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_28A ; work         ;
+;       |black_cell:level_28C| ; 4 (4)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_28C ; work         ;
+;       |black_cell:level_28E| ; 5 (5)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_28E ; work         ;
+;       |black_cell:level_29A| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_29A ; work         ;
+;       |black_cell:level_29E| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_29E ; work         ;
+;       |black_cell:level_2B|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_2B  ; work         ;
+;       |black_cell:level_31E| ; 6 (6)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_31E ; work         ;
+;       |black_cell:level_3A|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_3A  ; work         ;
+;       |black_cell:level_4A|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_4A  ; work         ;
+;       |black_cell:level_4C|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_4C  ; work         ;
+;       |black_cell:level_5A|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_5A  ; work         ;
+;       |black_cell:level_5C|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_5C  ; work         ;
+;       |black_cell:level_6A|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_6A  ; work         ;
+;       |black_cell:level_6C|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_6C  ; work         ;
+;       |black_cell:level_7A|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_7A  ; work         ;
+;       |black_cell:level_7C|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_7C  ; work         ;
+;       |black_cell:level_8A|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_8A  ; work         ;
+;       |black_cell:level_8B|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_8B  ; work         ;
+;       |black_cell:level_8D|  ; 3 (3)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_8D  ; work         ;
+;       |black_cell:level_9A|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_9A  ; work         ;
+;       |black_cell:level_9B|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_9B  ; work         ;
+;       |black_cell:level_9C|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_9C  ; work         ;
+;       |black_cell:level_9D|  ; 2 (2)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|black_cell:level_9D  ; work         ;
+;       |input_cell:level_Z0|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|input_cell:level_Z0  ; work         ;
+;       |input_cell:level_Z10| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|input_cell:level_Z10 ; work         ;
+;       |input_cell:level_Z16| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|input_cell:level_Z16 ; work         ;
+;       |input_cell:level_Z20| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|input_cell:level_Z20 ; work         ;
+;       |input_cell:level_Z21| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|input_cell:level_Z21 ; work         ;
+;       |input_cell:level_Z23| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|input_cell:level_Z23 ; work         ;
+;       |input_cell:level_Z24| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|input_cell:level_Z24 ; work         ;
+;       |input_cell:level_Z26| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|input_cell:level_Z26 ; work         ;
+;       |input_cell:level_Z27| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|input_cell:level_Z27 ; work         ;
+;       |input_cell:level_Z30| ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|input_cell:level_Z30 ; work         ;
+;       |input_cell:level_Z8|  ; 1 (1)             ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|Kogge32b:ksa32|input_cell:level_Z8  ; work         ;
+;    |PPGen:ppgen0|            ; 15 (15)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|PPGen:ppgen0                        ; work         ;
+;    |PPGen:ppgen1|            ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|PPGen:ppgen1                        ; work         ;
+;    |PPGen:ppgen2|            ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|PPGen:ppgen2                        ; work         ;
+;    |PPGen:ppgen3|            ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|PPGen:ppgen3                        ; work         ;
+;    |PPGen:ppgen4|            ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|PPGen:ppgen4                        ; work         ;
+;    |PPGen:ppgen5|            ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|PPGen:ppgen5                        ; work         ;
+;    |PPGen:ppgen6|            ; 33 (33)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|PPGen:ppgen6                        ; work         ;
+;    |PPGen:ppgen7|            ; 34 (34)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |MUL16x16|PPGen:ppgen7                        ; work         ;
++------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+-----------------------------------------------+--------------+
+Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------+
+; General Register Statistics                          ;
++----------------------------------------------+-------+
+; Statistic                                    ; Value ;
++----------------------------------------------+-------+
+; Total registers                              ; 0     ;
+; Number of registers using Synchronous Clear  ; 0     ;
+; Number of registers using Synchronous Load   ; 0     ;
+; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Load  ; 0     ;
+; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Preset             ; 0     ;
++----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+; 4:1                ; 15 bits   ; 30 LEs        ; 30 LEs               ; 0 LEs                  ; No         ; |MUL16x16|PPGen:ppgen0|Mux15 ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |MUL16x16|PPGen:ppgen1|Mux15 ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |MUL16x16|PPGen:ppgen2|Mux9  ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |MUL16x16|PPGen:ppgen3|Mux14 ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |MUL16x16|PPGen:ppgen4|Mux2  ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |MUL16x16|PPGen:ppgen5|Mux13 ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |MUL16x16|PPGen:ppgen6|Mux6  ;
+; 5:1                ; 14 bits   ; 42 LEs        ; 28 LEs               ; 14 LEs                 ; No         ; |MUL16x16|PPGen:ppgen7|Mux3  ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Kogge32b:ksa32|black_cell:level_15E"                                                                                                                                                 ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Pmj     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Pmj[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Kogge32b:ksa32|black_cell:level_7D"                                                                                                                                                  ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Pmj     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Pmj[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Kogge32b:ksa32|black_cell:level_3C"                                                                                                                                                  ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Pmj     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Pmj[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Kogge32b:ksa32|black_cell:level_1B"                                                                                                                                                  ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Pmj     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Pmj[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Kogge32b:ksa32|black_cell:level_0A"                                                                                                                                                  ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                                                            ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Pmj     ; Input ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; Pmj[-1] ; Input ; Info     ; Stuck at GND                                                                                                                                                                       ;
++---------+-------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Kogge32b:ksa32"                                                                                                                                                                       ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                                                            ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; y[1]    ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; cin     ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (1 bits) it drives.  The 31 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
+; cin[-1] ; Input  ; Info     ; Stuck at GND                                                                                                                                                                       ;
+; sum     ; Output ; Warning  ; Output or bidir port (32 bits) is wider than the port expression (31 bits) it drives; bit(s) "sum[31..31]" have no fanouts                                                         ;
++---------+--------+----------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CSA_HA:CSAHA"                                                                           ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; cout[17] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "CSA:CSA5"                                                                                   ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port         ; Type   ; Severity ; Details                                                                             ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+; a[20..19]    ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[20]        ; Input  ; Info     ; Stuck at GND                                                                        ;
+; b[0]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; c[20]        ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; c[1]         ; Input  ; Info     ; Stuck at GND                                                                        ;
+; cout[20..19] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; sum[20]      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++--------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "CSA:CSA4"        ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; a[20..19] ; Input ; Info     ; Stuck at GND ;
+; b[20]     ; Input ; Info     ; Stuck at GND ;
+; b[0]      ; Input ; Info     ; Stuck at GND ;
+; c[20]     ; Input ; Info     ; Stuck at VCC ;
+; c[1]      ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "CSA:CSA3"        ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; a[20..19] ; Input ; Info     ; Stuck at GND ;
+; b[20]     ; Input ; Info     ; Stuck at GND ;
+; b[0]      ; Input ; Info     ; Stuck at GND ;
+; c[20]     ; Input ; Info     ; Stuck at VCC ;
+; c[1]      ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "CSA:CSA2"        ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; a[20..19] ; Input ; Info     ; Stuck at GND ;
+; b[20]     ; Input ; Info     ; Stuck at GND ;
+; b[0]      ; Input ; Info     ; Stuck at GND ;
+; c[20]     ; Input ; Info     ; Stuck at VCC ;
+; c[1]      ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "CSA:CSA1"        ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; a[20..19] ; Input ; Info     ; Stuck at GND ;
+; b[20]     ; Input ; Info     ; Stuck at GND ;
+; b[0]      ; Input ; Info     ; Stuck at GND ;
+; c[20]     ; Input ; Info     ; Stuck at VCC ;
+; c[1]      ; Input ; Info     ; Stuck at GND ;
++-----------+-------+----------+--------------+
+
+
++---------------------------------------------+
+; Port Connectivity Checks: "CSA:CSA0"        ;
++-----------+-------+----------+--------------+
+; Port      ; Type  ; Severity ; Details      ;
++-----------+-------+----------+--------------+
+; a[20..18] ; Input ; Info     ; Stuck at GND ;
+; b[20..19] ; Input ; Info     ; Stuck at GND ;
+; b[18]     ; Input ; Info     ; Stuck at VCC ;
+; c[1..0]   ; Input ; Info     ; Stuck at GND ;
+; c[20]     ; Input ; Info     ; Stuck at VCC ;
++-----------+-------+----------+--------------+
+
+
++----------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "BOOTH:booth8"                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; Port       ; Type   ; Severity ; Details                                                                             ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+; data[2..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; sel        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "BOOTH:booth0"  ;
++---------+-------+----------+--------------+
+; Port    ; Type  ; Severity ; Details      ;
++---------+-------+----------+--------------+
+; data[0] ; Input ; Info     ; Stuck at GND ;
++---------+-------+----------+--------------+
+
+
++-------------------------------+
+; Elapsed Time Per Partition    ;
++----------------+--------------+
+; Partition Name ; Elapsed Time ;
++----------------+--------------+
+; Top            ; 00:00:02     ;
++----------------+--------------+
+
+
++-------------------------------+
+; Analysis & Synthesis Messages ;
++-------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit Analysis & Synthesis
+    Info: Version 13.1.0 Build 162 10/23/2013 SJ Web Edition
+    Info: Processing started: Thu Nov 26 12:43:29 2020
+Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab07 -c Lab07
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (12021): Found 7 design units, including 7 entities, in source file mul16x16.v
+    Info (12023): Found entity 1: BOOTH
+    Info (12023): Found entity 2: PPGen
+    Info (12023): Found entity 3: MUL16x16
+    Info (12023): Found entity 4: CSA
+    Info (12023): Found entity 5: CSA_HA
+    Info (12023): Found entity 6: FA
+    Info (12023): Found entity 7: HA
+Info (12021): Found 4 design units, including 4 entities, in source file kogge32b.v
+    Info (12023): Found entity 1: Kogge32b
+    Info (12023): Found entity 2: input_cell
+    Info (12023): Found entity 3: black_cell
+    Info (12023): Found entity 4: carry_eval_cell
+Info (12021): Found 1 design units, including 1 entities, in source file kogge32b_tb.v
+    Info (12023): Found entity 1: Kogge32b_tb
+Info (12021): Found 1 design units, including 1 entities, in source file mul16x16_tb.v
+    Info (12023): Found entity 1: MUL16x16_tb
+Info (12127): Elaborating entity "MUL16x16" for the top level hierarchy
+Info (12128): Elaborating entity "BOOTH" for hierarchy "BOOTH:booth0"
+Info (12128): Elaborating entity "PPGen" for hierarchy "PPGen:ppgen0"
+Info (12128): Elaborating entity "CSA" for hierarchy "CSA:CSA0"
+Info (12128): Elaborating entity "FA" for hierarchy "CSA:CSA0|FA:fadd20"
+Info (12128): Elaborating entity "CSA_HA" for hierarchy "CSA_HA:CSAHA"
+Info (12128): Elaborating entity "HA" for hierarchy "CSA_HA:CSAHA|HA:hadd17"
+Info (12128): Elaborating entity "Kogge32b" for hierarchy "Kogge32b:ksa32"
+Info (12128): Elaborating entity "input_cell" for hierarchy "Kogge32b:ksa32|input_cell:level_Z0"
+Info (12128): Elaborating entity "black_cell" for hierarchy "Kogge32b:ksa32|black_cell:level_0A"
+Info (12128): Elaborating entity "carry_eval_cell" for hierarchy "Kogge32b:ksa32|carry_eval_cell:c1"
+Warning (12241): 6 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (286030): Timing-Driven Synthesis is running
+Info (144001): Generated suppressed messages file D:/Project/2020-2/DigitalSystem/Quartus/Lab07/output_files/Lab07.map.smsg
+Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
+    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
+Info (21057): Implemented 729 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 32 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 665 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
+    Info: Peak virtual memory: 4675 megabytes
+    Info: Processing ended: Thu Nov 26 12:43:33 2020
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in D:/Project/2020-2/DigitalSystem/Quartus/Lab07/output_files/Lab07.map.smsg.
+
+

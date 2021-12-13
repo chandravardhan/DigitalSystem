@@ -1,0 +1,12 @@
+
+State Machine - |moore|curState
+Name curState.0111 curState.0110 curState.0101 curState.0100 curState.0011 curState.0010 curState.0001 curState.0000 curState.1000 
+curState.0000 0 0 0 0 0 0 0 0 0 
+curState.0001 0 0 0 0 0 0 1 1 0 
+curState.0010 0 0 0 0 0 1 0 1 0 
+curState.0011 0 0 0 0 1 0 0 1 0 
+curState.0100 0 0 0 1 0 0 0 1 0 
+curState.0101 0 0 1 0 0 0 0 1 0 
+curState.0110 0 1 0 0 0 0 0 1 0 
+curState.0111 1 0 0 0 0 0 0 1 0 
+curState.1000 0 0 0 0 0 0 0 1 1 

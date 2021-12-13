@@ -1,0 +1,839 @@
+|kogge_stone
+x[0] => x[0].IN1
+x[1] => x[1].IN1
+x[2] => x[2].IN1
+x[3] => x[3].IN1
+x[4] => x[4].IN1
+x[5] => x[5].IN1
+x[6] => x[6].IN1
+x[7] => x[7].IN1
+x[8] => x[8].IN1
+x[9] => x[9].IN1
+x[10] => x[10].IN1
+x[11] => x[11].IN1
+x[12] => x[12].IN1
+x[13] => x[13].IN1
+x[14] => x[14].IN1
+x[15] => x[15].IN1
+y[0] => y[0].IN1
+y[1] => y[1].IN1
+y[2] => y[2].IN1
+y[3] => y[3].IN1
+y[4] => y[4].IN1
+y[5] => y[5].IN1
+y[6] => y[6].IN1
+y[7] => y[7].IN1
+y[8] => y[8].IN1
+y[9] => y[9].IN1
+y[10] => y[10].IN1
+y[11] => y[11].IN1
+y[12] => y[12].IN1
+y[13] => y[13].IN1
+y[14] => y[14].IN1
+y[15] => y[15].IN1
+cin => cin.IN20
+cout <= carry_eval_cell:c16.port3
+sum[0] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[1] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[2] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[3] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[4] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[5] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[6] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[7] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[8] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[9] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[10] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[11] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[12] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[13] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[14] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+sum[15] <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z0
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z1
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z2
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z3
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z4
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z5
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z6
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z7
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z8
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z9
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z10
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z11
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z12
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z13
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z14
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|input_cell:level_Z15
+a => p.IN0
+a => g.IN0
+b => p.IN1
+b => g.IN1
+p <= p.DB_MAX_OUTPUT_PORT_TYPE
+g <= g.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_0A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_1A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_2A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_3A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_4A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_5A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_6A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_7A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_8A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_9A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_10A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_11A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_12A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_13A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_14A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_15A
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_1B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_2B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_3B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_4B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_5B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_6B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_7B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_8B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_9B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_10B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_11B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_12B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_13B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_14B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_15B
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_3C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_4C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_5C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_6C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_7C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_8C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_9C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_10C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_11C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_12C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_13C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_14C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_15C
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_7D
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_8D
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_9D
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_10D
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_11D
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_12D
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_13D
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_14D
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|black_cell:level_15D
+Pim => P.IN0
+Pim => G.IN0
+Gim => G.IN1
+Pmj => P.IN1
+Gmj => G.IN1
+P <= P.DB_MAX_OUTPUT_PORT_TYPE
+G <= G.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c1
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c2
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c3
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c4
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c5
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c6
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c7
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c8
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c9
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c10
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c11
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c12
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c13
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c14
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c15
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|kogge_stone|carry_eval_cell:c16
+Pi0 => ci.IN0
+Gi0 => ci.IN1
+c0 => ci.IN1
+ci <= ci.DB_MAX_OUTPUT_PORT_TYPE
+
+

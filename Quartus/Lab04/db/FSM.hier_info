@@ -1,0 +1,14 @@
+|moore
+nRESET => curState~3.DATAIN
+CLK => curState~1.DATAIN
+in => nextState.0010.DATAB
+in => nextState.0011.DATAB
+in => Selector1.IN1
+in => Selector0.IN1
+in => Selector2.IN1
+in => nextState.0110.DATAB
+in => nextState.0111.DATAB
+in => Selector3.IN1
+out <= out.DB_MAX_OUTPUT_PORT_TYPE
+
+

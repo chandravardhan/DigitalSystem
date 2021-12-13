@@ -1,0 +1,31 @@
+`define ADD 4'b0000
+`define SUB 4'b0001
+
+`define AND 4'b0010
+`define OR  4'b0011
+`define XOR 4'b0100
+`define NOT 4'b0101
+
+`define ASR 4'b0110
+`define LSR 4'b0111
+`define SHL 4'b1000
+`define RL  4'b1001
+`define RR  4'b1010
+
+`define MUL 4'b1011
+
+module alu_tb;
+
+	reg [15:0] valA,valB;
+	reg [3:0] aluop;
+	reg [15:0] res;
+	reg [3:0] cc;
+	
+	alu alu0(valA,valB,sub,aluop,res,cc);
+	
+	initial begin
+	
+	end
+	
+endmodule
+

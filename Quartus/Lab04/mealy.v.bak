@@ -1,0 +1,102 @@
+`define INIT 4'b0000
+`define ONE 4'b0001
+`define TWO 4'b0010
+`define THREE 4'b00011
+`define FOUR 4'b0100
+`define FIVE 4'b0101
+`define SIX 4'b0110
+`define SEVEN 4'b0111
+`define EIGHT 4'b1000
+
+module mealy(input nRESET, input clk, input in, output out);
+	reg curState, nextState, out;
+	
+	always @ (posedge clk or negedge nRESET)
+		if (!nRESET) curState <= `INIT;
+		else curState <= nextState;
+	
+	always @ (curState or in)
+		casex(curState)
+			`INIT: 
+				if (in == 1) begin
+					nextState = `ONE;
+					out = 1'b0;
+				end
+				else begin
+					nextState = `FIVE;
+					out = 1'b0;
+				end
+			`ONE:
+				if (in == 1) begin
+					nextState = `TWO;
+					out = 1'b0;
+				end
+				else begin
+					nextState = `INIT;
+					out = 1'b0;
+				end
+			`TWO:
+				if (in == 1) begin
+					nextState = `THREE;
+					out = 1'b0;
+				end
+				else begin
+					nextState = `INIT;
+					out = 1'b0;
+				end
+			`THREE:
+				if (in == 1) begin
+					nextState = `FOUR;
+					out = 1'b1;
+				end
+				else begin
+					nextState = `INIT;
+					out = 1'b0;
+				end
+			`FOUR:
+				if (in == 1) begin
+					nextState = `FOUR;
+					out = 1'b1;
+				end
+				else begin
+					nextState = `INIT;
+					out = 1'b0;
+				end
+			`FIVE:
+				if (in == 0) begin
+					nextState = `SIX;
+					out = 1'b0;
+				end
+				else begin
+					nextState = `INIT;
+					out = 1'b0;
+				end
+			`SIX:
+				if (in == 0) begin
+					nextState = `SEVEN;
+					out = 1'b0;
+				end
+				else begin
+					nextState = `INIT;
+					out = 1'b0;
+				end
+			`SEVEN:
+				if (in == 0) begin
+					nextState = `EIGHT;
+					out = 1'b1;
+				end
+				else begin
+					nextState = `INIT;
+					out = 1'b0;
+				end
+			`EIGHT:
+				if (in == 0) begin
+					nextState = `EIGHT;
+					out = 1'b1;
+				end
+				else begin
+					nextState = `INIT;
+					out = 1'b0;
+				end
+	endcase
+endmodule

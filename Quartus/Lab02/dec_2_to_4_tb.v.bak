@@ -1,0 +1,24 @@
+module dec_2_to_4;
+
+wire Out3, Out2, Out1, Out0;
+reg In1, In0;
+
+dec_2_to_4 dec_2_to_40(Out3, Out2, Out1, Out0, In1, In0);
+
+initial begin
+	In0 = 1'b0;
+	In1 = 1'b0;
+
+	#100
+	In0 = 1'b0;
+	In1 = 1'b1;
+
+	#100
+	In0 = 1'b1;
+	In1 = 1'b0;
+
+	#100
+	In0 = 1'b1;
+	In1 = 1'b0;
+	end
+endmodule

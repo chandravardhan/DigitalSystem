@@ -1,0 +1,99 @@
+module kogge_stone(x,y,cin,cout,sum);
+input [15:0] x,y;
+input cin;
+output cout;
+output [15:0] sum;
+wire [15:0] 
+	G_Z,P_Z, // input_cell
+	G_A,P_A, // merge level 1
+	G_B,P_B, // merge level 2
+	G_C,P_C, // merge level 3
+	G_D,P_D; // merge level 4
+	
+
+// input level
+input_cell level_Z0(x[0],y[0],P_Z[0],G_Z[0]);
+input_cell level_Z1(x[1],y[1],P_Z[1],G_Z[1]);
+input_cell level_Z2(x[2],y[2],P_Z[2],G_Z[2]);
+input_cell level_Z3(x[3],y[3],P_Z[3],G_Z[3]);
+
+input_cell level_Z4(x[4],y[4],P_Z[4],G_Z[4]);
+input_cell level_Z5(x[5],y[5],P_Z[5],G_Z[5]);
+input_cell level_Z6(x[6],y[6],P_Z[6],G_Z[6]);
+input_cell level_Z7(x[7],y[7],P_Z[7],G_Z[7]);
+
+input_cell level_Z8(x[8],y[8],P_Z[8],G_Z[8]);
+input_cell level_Z9(x[9],y[9],P_Z[9],G_Z[9]);
+input_cell level_Z10(x[10],y[10],P_Z[10],G_Z[10]);
+input_cell level_Z11(x[11],y[11],P_Z[11],G_Z[11]);
+
+input_cell level_Z12(x[12],y[12],P_Z[12],G_Z[12]);
+input_cell level_Z13(x[13],y[13],P_Z[13],G_Z[13]);
+input_cell level_Z14(x[14],y[14],P_Z[14],G_Z[14]);
+input_cell level_Z15(x[15],y[15],P_Z[15],G_Z[15]);
+
+// level 1
+black_cell level_0A(P_A[1],G_A[1],0,cin		  ,P_B[1],G_B[1]);
+black_cell level_0A(P_A[2],G_A[2],P_A[0],G_A[0],P_B[2],G_B[2]);
+black_cell level_0A(P_A[3],G_A[3],P_A[1],G_A[1],P_B[3],G_B[3]);
+black_cell level_0A(P_A[4],G_A[4],P_A[2],G_A[2],P_B[4],G_B[4]);
+
+black_cell level_0A(P_A[5],G_A[5],P_A[3],G_A[3],P_B[5],G_B[5]);
+black_cell level_0A(P_A[6],G_A[6],P_A[4],G_A[4],P_B[6],G_B[6]);
+black_cell level_0A(P_A[7],G_A[7],P_A[5],G_A[5],P_B[7],G_B[7]);
+black_cell level_0A(P_A[8],G_A[8],P_A[6],G_A[6],P_B[8],G_B[8]);
+
+black_cell level_0A(P_A[9],G_A[9],P_A[7],G_A[7],P_B[9],G_B[9]);
+black_cell level_0A(P_A[10],G_A[10],P_A[8],G_A[8],P_B[10],G_B[10]);
+black_cell level_0A(P_A[11],G_A[11],P_A[9],G_A[9],P_B[11],G_B[11]);
+black_cell level_0A(P_A[12],G_A[12],P_A[10],G_A[10],P_B[12],G_B[12]);
+
+black_cell level_0A(P_A[13],G_A[13],P_A[11],G_A[11],P_B[13],G_B[13]);
+black_cell level_0A(P_A[14],G_A[14],P_A[12],G_A[12],P_B[14],G_B[14]);
+black_cell level_0A(P_A[15],G_A[15],P_A[13],G_A[13],P_B[15],G_B[15]);
+
+// level 2
+black_cell level_0A(P_B[3],G_B[3],0,cin		  ,P_C[3],G_C[3]);
+black_cell level_0A(P_B[4],G_B[4],P_B[0],G_B[0],P_C[4],G_C[4]);
+black_cell level_0A(P_B[5],G_B[5],P_B[1],G_B[1],P_C[5],G_C[5]);
+black_cell level_0A(P_B[6],G_B[6],P_B[2],G_B[2],P_C[6],G_C[6]);
+
+black_cell level_0A(P_B[7],G_B[7],P_B[3],G_B[3],P_C[7],G_C[7]);
+black_cell level_0A(P_B[8],G_B[8],P_B[4],G_B[4],P_C[8],G_C[8]);
+black_cell level_0A(P_B[9],G_B[9],P_B[5],G_B[5],P_C[9],G_C[9]);
+black_cell level_0A(P_B[10],G_B[10],P_B[6],G_B[6],P_C[10],G_C[10]);
+
+black_cell level_0A(P_B[11],G_B[11],P_B[7],G_B[7],P_C[11],G_C[11]);
+black_cell level_0A(P_B[12],G_B[12],P_B[8],G_B[8],P_C[12],G_C[12]);
+black_cell level_0A(P_B[13],G_B[13],P_B[9],G_B[9],P_C[13],G_C[13]);
+black_cell level_0A(P_B[14],G_B[14],P_B[10],G_B[10],P_C[14],G_C[14]);
+
+black_cell level_0A(P_B[15],G_B[15],P_B[11],G_B[11],P_C[15],G_C[15]);
+
+endmodule
+
+module input_cell(a,b,p,g);
+input a,b;
+output p,g;
+
+assign p = a^b;
+assign g = a&b;
+endmodule
+
+module black_cell(Pim,Gim,Pmj,Gmj,Pij,Gij);
+input Pim,Gim,Pmj,Gmj;
+output Pij,Gij;
+
+assign Pij = Pim | Pmj;
+assign Gij = Gim | Pim & Gmj;
+
+endmodule
+
+module carry_eval_cell(Gi0,Pi0,c0,ci);
+input Gi0,Pi0,c0;
+output ci;
+
+assign ci = Gi0 | Pi0 & c0;
+
+endmodule
+

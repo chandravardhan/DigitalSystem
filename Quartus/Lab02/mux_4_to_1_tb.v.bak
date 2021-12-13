@@ -1,0 +1,27 @@
+module mux_4_to_1_tb;
+wire Out;
+reg In0, In1, In2, In3, Sel0, Sel1;
+
+mux_4_to_1 mux_4_to_10(Out, In0, In1, In2, In3, Sel1, Sel0);
+
+initial begin
+	In0 = 1'b0;
+	In1 = 1'b1;
+	In2 = 1'b0;
+	In3 = 1'b1;
+	Sel1 = 1'b0;
+	Sel0 = 1'b0;
+	
+	#100
+	Sel0 = 1'b1;
+	
+	#100
+	Sel1 = 1'b1;
+	Sel0 = 1'b0;
+	
+	#100
+	Sel0 = 1'b1;
+	
+	#100
+	end
+endmodule

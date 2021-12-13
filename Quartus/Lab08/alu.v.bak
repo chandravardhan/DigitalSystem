@@ -1,0 +1,42 @@
+module alu (valA, valB, aluop, sub, cc, result);
+	input [15:0] valA;
+	input [15:0] valB;
+	input [ 3:0] aluop;
+	input sub;
+	
+	output [ 3:0] cc;
+	output [15:0] result;
+	
+	wire [15:0] and16b, or16b, shift_out, add_out, svalB, result;
+	wire shift_co, add_co;
+	wire [3:0] cc;
+	wire N,Z,C,V;
+	
+	assign and16b = valA & valB;
+	assign or16b = valA | valB;
+	assign xor16b = valA ^ valB;
+	
+	shifter myShifter (valA, valB, shift_ov, shift_out);
+	
+	assign svalB = sub ? ~valB : valB;
+	
+	adder myAdder (valA, svalB, sub, add_co, add_out);
+	
+	assign result =
+	(aluop == 2’b00) ? and16b :
+	(aluop == 2’b01) ? or16b :
+	(aluop == 2’b10) ? shift_out :
+	(aluop == 2’b11) ? add_out : 16’bx;
+	
+	assign N = result[15];
+	assign Z = ~|result;
+	assign C = (aluop==2’b11/*ADD*/) & add_co;
+	assign V = (aluop == 2’b10/*SHIFT*/) ? shift_ov :
+	(aluop == 2’b11/*ADD*/) ?
+	(~valA[15] & ~svalB[15] & add_out[15]) | /* (-) + (-) = (+) */
+	(valA[15] & sval[15] & ~add_out[15]) : /* (+) + (+) = (-) */
+	1’b0;
+	
+	assign cc = {N,Z,C,V};
+	
+endmodule

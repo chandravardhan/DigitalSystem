@@ -1,0 +1,16 @@
+module dec_2_to_4(Out3, Out2, Out1, Out0, In1, In0);
+	input In1, In0;
+	output Out3, Out2, Out1, Out0;
+	
+	wire NotIn1, NotIn0;
+	
+	not not0(NotIn0, In0);
+	not not1(NotIn1, In1);
+	
+	and and0(Out0, NotIn0, NotIn1);
+	and and1(Out1, NotIn0, In1);
+	and and2(Out2, In0, NotIn1);
+	and and3(Out3, In0, In1);
+	
+endmodule
+	
