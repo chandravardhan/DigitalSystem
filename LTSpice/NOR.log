@@ -1,0 +1,21 @@
+Circuit: * D:\Project\2020-2\DigitalSystem\NOR.asc
+
+Direct Newton iteration for .op point succeeded.
+
+Date: Sun Oct 11 00:03:06 2020
+Total elapsed time: 1.986 seconds.
+
+tnom = 27
+temp = 27
+method = modified trap
+totiter = 101372
+traniter = 101366
+tranpoints = 50208
+accept = 50154
+rejected = 54
+matrix size = 24
+fillins = 0
+solver = Normal
+Matrix Compiler1: 2.16 KB object code size  0.4/0.2/[0.2]
+Matrix Compiler2: 2.62 KB object code size  0.2/0.3/[0.2]
+
