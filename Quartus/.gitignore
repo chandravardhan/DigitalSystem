@@ -39,7 +39,7 @@
 
 # software binary files
 
-/simulation
+*/simulation/
 !/*.gitignore
 ##
 !*.qpf
